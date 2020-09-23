@@ -8,14 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'BTTH';
   ngOnInit() {
-    //Bài 1:Tính S(n) = x + x^2 + x^3 + … + x^n
-    // let s=0;
-    // let n=3;
-    // let x=2;
-    // for(let i=1;i<=n;++i){
-    //   s+=x/i;
-    // }
-    // console.log(s);
+   // Bài 1:Tính S(n) = x + x^2 + x^3 + … + x^n
+    let s=0;
+    let n=3;
+    let x=2;
+    for(let i=1;i<=n;++i){
+      s+=x/i;
+    }
+    console.log(s);
 
     // Bài 2:Tính S(x, n) = – x + x^2/2! – x^3/3! + … + (-1)^n * x^n/n!
     // var gt=(n)=>{
@@ -80,33 +80,33 @@ export class AppComponent implements OnInit {
     // });
     // console.log("total is : " + total);
     // Bài 8: Tính thể tích của hình chóp khi biết diện tích đáy và chiều cao
-    class tamgiac{
-      a: number;
-      b: number;
-      c: number;
-      constructor(a: number, b: number,c: number){
-        this.a = a;
-        this.b = b;
-        this.c = c;
-      }
-      dt(){
-        var p = (this.a+this.b+this.c)/2;
-        var s = p*(p-this.a)*(p-this.b)*(p-this.c);
-        return Math.sqrt(s);
-      }
-    }
-    class hinhchop extends tamgiac{
-      h : number;
-      constructor(a: number, b: number,c: number, h:number){
-        super(a,b,c);
-        this.h = h;
-      }
-      tc(){
-        return 1/3 * super.dt()*this.h;
-      }
-    }
-    var hc = new hinhchop(3,4,5,6);
-    console.log(hc.tc());
+    // class tamgiac{
+    //   a: number;
+    //   b: number;
+    //   c: number;
+    //   constructor(a: number, b: number,c: number){
+    //     this.a = a;
+    //     this.b = b;
+    //     this.c = c;
+    //   }
+    //   dt(){
+    //     var p = (this.a+this.b+this.c)/2;
+    //     var s = p*(p-this.a)*(p-this.b)*(p-this.c);
+    //     return Math.sqrt(s);
+    //   }
+    // }
+    // class hinhchop extends tamgiac{
+    //   h : number;
+    //   constructor(a: number, b: number,c: number, h:number){
+    //     super(a,b,c);
+    //     this.h = h;
+    //   }
+    //   tc(){
+    //     return 1/3 * super.dt()*this.h;
+    //   }
+    // }
+    // var hc = new hinhchop(3,4,5,6);
+    // console.log(hc.tc());
 
     // Vd1:Tính tổng dãy số S=1+1/2+..+n(n=10)
     // let n = 10;
